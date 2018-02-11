@@ -7,9 +7,7 @@ self.addEventListener('install', function (e) {
                 '/404.html',
                 '/favicon.ico',
                 '/assets/app.css',
-                '/images/github.png',
-                'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js',
-                'https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu'
+                '/images/github.png'
             ]);
         })
     );
