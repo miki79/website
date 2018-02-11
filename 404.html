@@ -3,10 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>miki.me.uk</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f3f3" />
+    <link rel="stylesheet" href="assets/app.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110184077-2"></script>
     <script>
         WebFontConfig = {
-            google: { families: [ 'Ubuntu' ] }
+            google: { families: ['Indie+Flower|Ubuntu'] }
         };
         (function() {
             var wf = document.createElement('script');
@@ -23,36 +27,20 @@
         gtag('config', 'UA-110184077-2');      
         // End GA        
     </script>
-    <style>
-        body {
-            background: rgb(4, 57, 92);
-            color: #fff;
-            font-family: 'Ubuntu', sans-serif;
-            text-align: center;
-        }
-        .yellow {
-            color: rgb(241, 238, 205);
-        }
-        h1 {
-            padding-top: 15px;
-            font: 200px 'Ubuntu', sans-serif;
-            margin-bottom: 10px;
-        }
-        .body a {
-            margin: 0.5em;
-            padding-bottom:5px;
-            text-decoration: none;
-            border-bottom: 1px solid rgb(241, 238, 205);
-            color: #fff;
-        }        
-    </style>
 </head>
 
 <body>
     <div class="body">
-        <h1>4<span class="yellow">0</span>4</h1>
+        <h1 class="big">4<span class="yellow">0</span>4</h1>
         <h2>OOPS, sorry we can't find that page</h2>
-    </div>
+    </div>    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/assets/sw.js')
+                .then(function () { console.log("Service Worker Registered"); });
+        }
+    </script>
 </body>
 
 </html>

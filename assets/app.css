@@ -1,0 +1,27 @@
+body {
+    background: #04395C;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+.yellow {
+    color: #F1EECD;
+}
+h1 {
+    padding-top: 40px;
+    font: 90px 'Indie Flower', cursive;
+}
+h1.big {
+    font-size:200px; padding-top:5px;
+    margin: 5px;
+}
+.body a {
+    margin: 0.5em;
+    padding-bottom:5px;
+    text-decoration: none;
+    border-bottom: 1px solid #F1EECD;
+    color: #fff;
+}
+.body img {
+    margin-right: 0.5em;
+}
