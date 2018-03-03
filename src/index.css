@@ -1,0 +1,14 @@
+body {
+  background: #04395c;
+  color: #fff;
+  font-family: 'Indie Flower';
+  text-align: center;
+}
+.yellow {
+  color: #f1eecd;
+}
+a {
+  margin: 0.5em;
+  padding-bottom: 5px;
+  color: #fff;
+}
