@@ -10,7 +10,10 @@
     <meta name="theme-color" content="#f3f3f3" />
     <link rel="stylesheet" href="assets/app.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110184077-2"></script>
-    <script>
+    <script type="text/javascript">
+        if (location.href.indexOf('www')) {
+            location.href = 'https://miki.me.uk';
+        }
         WebFontConfig = {
             google: { families: ['Indie+Flower|Ubuntu'] }
         };
