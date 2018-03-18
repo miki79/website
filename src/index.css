@@ -7,8 +7,13 @@ body {
 .yellow {
   color: #f1eecd;
 }
-a {
+a {  
+  line-height:40px;
   margin: 0.5em;
   padding-bottom: 5px;
   color: #fff;
+}
+a img {
+  margin-right:10px;
+  vertical-align: middle;
 }
