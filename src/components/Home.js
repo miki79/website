@@ -8,10 +8,13 @@ class Home extends Component {
     return (
       <div>
         <h1 className="titleHome">
-          miki<span className="yellow">.</span>me<span className="yellow">
-            .
-          </span>uk
+          <span class="yellow">"</span>Let's be heroes,<br /> just for one day<span class="yellow">
+            "
+          </span>
         </h1>
+        <p class="right">
+          <span class="yellow">David Bowie</span>
+        </p>
         <p>
           <ReactGA.OutboundLink
             eventLabel="github"
