@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import githubLogo from './github.png';
 import twitterLogo from './twitter.jpg';
-import './Home.css';
 
 class Home extends Component {
   render() {
