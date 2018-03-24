@@ -6,13 +6,13 @@ import twitterLogo from './twitter.png';
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <h1 className="titleHome">
           <span class="yellow">"</span>We can be Heroes,<br /> just for one day<span class="yellow">
             "
           </span>
         </h1>
-        <p class="right">
+        <p class="subTitle">
           <span class="yellow">David Bowie</span>
         </p>
         <p>
