@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import githubLogo from './github.png';
 import twitterLogo from './twitter.png';
+import Weather from './Weather';
 
 class Home extends Component {
   render() {
@@ -35,6 +36,7 @@ class Home extends Component {
             </span>
           </ReactGA.OutboundLink>
         </p>
+        <Weather />
       </div>
     );
   }
