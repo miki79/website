@@ -9,12 +9,11 @@ class Home extends Component {
     return (
       <div className="main">
         <h1 className="titleHome">
-          <span class="yellow">"</span>We can be Heroes,<br /> just for one day<span class="yellow">
-            "
-          </span>
+          <span className="yellow">"</span>We can be Heroes,<br /> just for one
+          day<span className="yellow">"</span>
         </h1>
-        <p class="subTitle">
-          <span class="yellow">David Bowie</span>
+        <p className="subTitle">
+          <span className="yellow">David Bowie</span>
         </p>
         <p>
           <ReactGA.OutboundLink

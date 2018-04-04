@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "miki79",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
   "homepage": "https://miki.me.uk/",
   "scripts": {
     "start": "react-scripts start",
+    "now-start": "serve --single ./build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
