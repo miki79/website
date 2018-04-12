@@ -4,8 +4,8 @@ import ReactGA from 'react-ga';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 ReactGA.initialize('UA-110184077-2');
-ReactGA.pageview(window.location.pathname + window.location.search);
 ReactGA.set({anonymizeIp:true});
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
