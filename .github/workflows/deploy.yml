@@ -1,24 +1,21 @@
-name: Site Deploy
-
+name: Build and Deploy
 on:
   push:
     branches:
       - source
-
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
     - name: Checkout
-      uses: actions/setup-node@v1
-    - name: npm install, build, test and deploy
-      run: |
-        npm install
-        npm run build --if-present
-        npm run deploy
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
       env:
-        CI: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        BUILD_SCRIPT: npm install && npm run-script build
+        CNAME: miki.me.uk
+        BASE_BRANCH: source
