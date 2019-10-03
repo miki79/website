@@ -7,7 +7,7 @@
     "react-dom": "^16.10.1",
     "react-ga": "^2.6.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.1.2"
+    "react-scripts": "^3.2.0"
   },
   "homepage": "https://miki.me.uk/",
   "scripts": {
