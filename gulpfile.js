@@ -8,8 +8,15 @@ function cleanDest() {
   return gulp.src("dist/*", { read: false }).pipe(clean());
 }
 
-function copyFont() {
-  return gulp.src(["src/assets/**/*"]).pipe(gulp.dest("dist/assets"));
+function copyAssets() {
+  return gulp
+    .src([
+      "src/assets/**/*",
+      "src/favicon.ico",
+      "src/manifest.json",
+      "src/robots.txt"
+    ])
+    .pipe(gulp.dest("dist/assets"));
 }
 
 function copyImages() {
@@ -26,4 +33,4 @@ function minHtml() {
     .pipe(gulp.dest("dist"));
 }
 
-exports.build = series(cleanDest, copyFont, copyImages, minHtml);
+exports.build = series(cleanDest, copyAssets, copyImages, minHtml);
