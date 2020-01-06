@@ -9,14 +9,19 @@ function cleanDest() {
 }
 
 function copyAssets() {
+  return gulp.src(["src/assets/**/*"]).pipe(gulp.dest("dist/assets"));
+}
+
+function copyExtra() {
   return gulp
     .src([
-      "src/assets/**/*",
       "src/favicon.ico",
       "src/manifest.json",
-      "src/robots.txt"
+      "src/robots.txt",
+      "netlify.toml",
+      "_redirects"
     ])
-    .pipe(gulp.dest("dist/assets"));
+    .pipe(gulp.dest("dist/"));
 }
 
 function copyImages() {
@@ -33,4 +38,4 @@ function minHtml() {
     .pipe(gulp.dest("dist"));
 }
 
-exports.build = series(cleanDest, copyAssets, copyImages, minHtml);
+exports.build = series(cleanDest, copyExtra, copyAssets, copyImages, minHtml);
