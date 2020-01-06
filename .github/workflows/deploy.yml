@@ -1,19 +1,10 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - master
+name: main
+on: [push]
 jobs:
-  build-and-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
+    name: Build and test
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: public
-          CNAME: miki.me.uk
+      - uses: actions/checkout@v1
+      - uses: bahmutov/npm-install@v1
+      - run: npm t
