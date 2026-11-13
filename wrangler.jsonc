@@ -8,5 +8,8 @@
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
-  "routes": [{ "pattern": "miki.me.uk", "custom_domain": true }]
+  "routes": [
+    { "pattern": "miki.me.uk", "custom_domain": true },
+    { "pattern": "www.miki.me.uk", "custom_domain": true }
+  ]
 }
