@@ -1,0 +1,12 @@
+{
+  // Static site served by Cloudflare Workers static assets (no Worker script needed)
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "miki-me-uk",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [{ "pattern": "miki.me.uk", "custom_domain": true }]
+}

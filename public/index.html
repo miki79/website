@@ -1,45 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#f3f3f3" />
-    <meta name="description" content="Miki.me.uk" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/main.css">
-    <title>miki.me.uk</title>    
-  </head>
-  <body>
-    <div class="main">
-      <div class="mainBox">
-        <h1 class="titleHome">
-          <span class="yellow">"</span>We can be Heroes,<br />
-          just for one day<span class="yellow">"</span>
-        </h1>
-        <p class="subTitle">
-          <span class="yellow">David Bowie</span>
-        </p>
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michele (Miki) — miki.me.uk</title>
+  <meta name="description" content="Michele, known as Miki. Software engineer in the UK, writing JavaScript, Java and Python.">
+  <meta name="theme-color" content="#EEF1F6">
+  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;800&family=Fragment+Mono&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=5">
+  <script src="/tabs.js?v=5" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <h1 class="name">Michele<span class="aka">Miki to most people</span></h1>
+      <p class="lede">Software engineer in the UK. I write JavaScript, Java and Python, and I like building things that quietly keep running.</p>
+    </section>
+
+    <section class="editor" aria-label="Me, in three languages" data-lang="js">
+      <div class="tabs" role="tablist" aria-label="Language">
+        <button role="tab" id="tab-js" aria-controls="panel-js" aria-selected="true" data-lang="js">JavaScript</button>
+        <button role="tab" id="tab-java" aria-controls="panel-java" aria-selected="false" tabindex="-1" data-lang="java">Java</button>
+        <button role="tab" id="tab-py" aria-controls="panel-py" aria-selected="false" tabindex="-1" data-lang="py">Python</button>
       </div>
-      <p>
-        <a href="https://github.com/miki79">
-          <img src="./images/github.png" alt="Github" />github.com/<span
-            class="yellow"
-            >miki79</span
-          >
-        </a>
-      </p>
-      <p>
-        <a href="https://twitter.com/mikiuk">
-          <img src="./images/twitter.png" alt="Twitter" />twitter.com/<span
-            class="yellow"
-            >mikiuk</span
-          >
-        </a>
-      </p>
-    </div>
-  </body>
+
+      <div class="panels">
+<pre role="tabpanel" id="panel-js" aria-labelledby="tab-js" tabindex="0"><code><span class="c">// We can be heroes,</span>
+<span class="c">// just for one day.</span>
+
+<span class="k">const</span> me = {
+  <span class="p">name</span>: <span class="s">"Michele"</span>,
+  <span class="p">aka</span>: <span class="s">"Miki"</span>,
+  <span class="p">job</span>: <span class="s">"software engineer"</span>,
+  <span class="p">home</span>: <span class="s">"UK"</span>,
+};</code></pre>
+<pre role="tabpanel" id="panel-java" aria-labelledby="tab-java" tabindex="0" hidden><code><span class="c">// We can be heroes,</span>
+<span class="c">// just for one day.</span>
+
+<span class="k">var</span> me = <span class="k">new</span> <span class="t">Engineer</span>(
+    <span class="s">"Michele"</span>,
+    <span class="s">"Miki"</span>,
+    <span class="s">"UK"</span>
+);</code></pre>
+<pre role="tabpanel" id="panel-py" aria-labelledby="tab-py" tabindex="0" hidden><code><span class="c"># We can be heroes,</span>
+<span class="c"># just for one day.</span>
+
+me = <span class="t">Engineer</span>(
+    <span class="p">name</span>=<span class="s">"Michele"</span>,
+    <span class="p">aka</span>=<span class="s">"Miki"</span>,
+    <span class="p">home</span>=<span class="s">"UK"</span>,
+)</code></pre>
+      </div>
+      <p class="credit">The comment is David Bowie’s, 1977.</p>
+    </section>
+  </main>
+</body>
 </html>

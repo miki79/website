@@ -1,21 +1,11 @@
 {
-  "name": "miki-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {},
+  "name": "miki-me-uk",
+  "private": true,
   "scripts": {
-    "build": "echo 'Static Website'"
+    "dev": "wrangler dev --port 8787",
+    "deploy": "wrangler deploy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/miki79/website.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/miki79/website/issues"
-  },
-  "homepage": "https://github.com/miki79/website#readme"
+  "devDependencies": {
+    "wrangler": "^4.162.0"
+  }
 }
