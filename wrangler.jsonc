@@ -1,21 +1,21 @@
 {
-  // Static site on Cloudflare Workers. src/worker.js runs first to redirect
-  // alias domains (giardi.net) to miki.me.uk; everything else is ./public.
+  // Static site on Cloudflare Workers: static assets only, no Worker code, so
+  // requests don't count against the Workers daily request limit. The redirects
+  // (www.miki.me.uk and giardi.net to https://miki.me.uk) are Cloudflare
+  // Redirect Rules on each zone, which run before the Worker.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "miki-me-uk",
-  "main": "src/worker.js",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./public",
-    "binding": "ASSETS",
-    "run_worker_first": true,
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
   "routes": [
     { "pattern": "miki.me.uk", "custom_domain": true },
     { "pattern": "www.miki.me.uk", "custom_domain": true },
-    // Alias domains: redirected to miki.me.uk by src/worker.js
+    // www and the alias domains are redirected to miki.me.uk by Redirect Rules;
+    // the custom domains are kept so Cloudflare keeps their DNS records.
     { "pattern": "giardi.net", "custom_domain": true },
     { "pattern": "www.giardi.net", "custom_domain": true }
   ]
